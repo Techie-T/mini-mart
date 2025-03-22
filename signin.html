@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Webpage</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <form id="signinForm" class="container">
+      <div class="sign-up">
+        <h1 class="heading">Hello, friend!</h1>
+
+        <div class="text">
+          <img
+            src="https://i.postimg.cc/1zgS8WTF/user.png"
+            alt="icon"
+            height="20"
+          />
+          <input type="text" id="name" placeholder="Name" required />
+        </div>
+
+        <div class="text">
+          <img
+            src="https://i.postimg.cc/Nj5SDK4q/password.png"
+            alt="icon"
+            height="20"
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" />
+          <p class="conditions">
+            I read and agree to <a href="#">terms & conditions</a>
+          </p>
+        </div>
+
+        <button type="submit">SIGN IN</button>
+        <div id="signinMessage" class="hidden"></div>
+        <p class="conditions">
+          Don't have an account? <a href="indexed.html">Sign Up</a>
+        </p>
+      </div>
+
+      <div class="text-container">
+        <h1>Glad to see you!</h1>
+        <p>Welcome Back, please fill in the blanks for sign in</p>
+      </div>
+    </form>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

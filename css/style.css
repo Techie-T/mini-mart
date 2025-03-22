@@ -1,0 +1,113 @@
+html {
+  scroll-behavior: smooth;
+}
+.btn {
+  border-radius: 1rem;
+  padding: 0.6rem 2rem;
+  font-size: 13px;
+}
+
+/*======PRODUCT SECTION======*/
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.product div {
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+/*======CART SECTION======
+.cart {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.cart-item {
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  line-height: 2rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.remove-from-cart {
+  background-color: hsl(0, 100%, 50%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-from-cart:hover {
+  background-color: hsl(0, 80%, 40%);
+}
+footer p {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+}
+/*====HOME PAGE SECTION====*/
+.hero p {
+  margin: 30px 0;
+}
+.home-main {
+  height: 100vh;
+}
+.size2 {
+  font-size: 40px;
+}
+.span {
+  border-right: 4px solid hsl(240, 100%, 50%);
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 15ch;
+  animation: title-move 10s steps(16) infinite;
+}
+
+@keyframes title-move {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 585px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+/* Add this to your CSS file */
+.nav-menu {
+  display: none; /* Hide by default */
+}
+
+.show-menu {
+  display: block; /* Show when toggled */
+}

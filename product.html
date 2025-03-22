@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/prod.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!--LINK ICONS-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>M & T's Product Page</title>
+  </head>
+
+  <!--BODY START-->
+  <body class="bg-gray-800 text-white">
+    <header class="p-4 mb-3 w-full bg-gray-700 header">
+      <nav class="flex items-center justify-between">
+        <a href="index.html" class="title">M & T's Store</a>
+
+        <!--DARK AND TOGGLE WRAP-->
+        <div class="flex items-center">
+          <div class="nav-menu bg-gray-700 w-80 -right-0" id="nav-menu">
+            <ul class="nav-list text-center flex gap-8 flex-col">
+              <li><a href="indexe.html" class="nav-link relative">Home</a></li>
+              <li>
+                <a href="product.html" class="nav-link relative">Shop</a>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link relative">About</a>
+              </li>
+            </ul>
+
+            <!--CLOSE BUTTON-->
+            <div
+              class="absolute top-1 nav-close flex cursor-pointer"
+              id="nav-close"
+            >
+              <p>X</p>
+            </div>
+          </div>
+
+          <!--TOOGLE BUTTON-->
+          <div id="nav-toogle" class="nav-toogle menu-wrap cursor-pointer flex">
+            <div class="flex flex-col gap-1">
+              <div class="bg-white w-8 h-0.5"></div>
+              <div class="bg-white w-8 h-0.5"></div>
+              <div class="bg-white w-8 h-0.5"></div>
+            </div>
+          </div>
+
+          <!--DARK AND LIGHT THEME BUTTON-->
+          <div
+            id="theme-toggle"
+            class="text-white rounded-full p-2 flex items-center cursor-pointer"
+          >
+            <span class="material-symbols-outlined" id="dark-icon"
+              >dark_mode</span
+            >
+            <span class="material-symbols-outlined hidden" id="light-icon"
+              >light_mode</span
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="p-4 mb-6">
+      <div
+        class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
+      >
+        <!--SEARCH AREA-->
+
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="search"
+            class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full outline-none"
+            placeholder="Search Products...."
+          />
+
+          <svg
+            class="absolute left-2 top-1 translate-y-1 cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"
+            ></path>
+          </svg>
+        </div>
+
+        <!--CART ICON-->
+        <div class="relative text-center cart-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
+            />
+          </svg>
+
+          <small
+            id="cart-count"
+            class="bg-red-500 rounded-full text-xs text-white absolute -top-2 w-4 h-4 -right-2"
+          >
+            0</small
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex flex-col max-auto container max-w-6xl md:flex-row">
+      <div class="space-y-4 p-2 w-full max-w-[10rem]">
+        <h2 class="text-2xl">Filters</h2>
+        <h3 class="text-xl">Category</h3>
+        <div id="filters-container" class="text-xl space-y-2">
+          <div>
+            <input type="checkbox" class="check accent-pink-500" id="camera" />
+            <label for="cameras">Cameras</label>
+          </div>
+
+          <div>
+            <input type="checkbox" class="check accent-pink-500" id="phone" />
+            <label for="smartphones">Smartphones</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              class="check accent-pink-500"
+              id="appliance"
+            />
+            <label for="Phone appliance">Appliance</label>
+          </div>
+
+          <div>
+            <input type="checkbox" class="check accent-pink-500" id="games" />
+            <label for="games">Games</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              class="check accent-pink-500"
+              id="television"
+            />
+            <label for="televisions">Televisions</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              class="check accent-pink-500"
+              id="vreality"
+            />
+            <label for="virtual reality">Virtual</label>
+          </div>
+        </div>
+      </div>
+
+      <!--products Wrapper-->
+
+      <div
+        id="products-wrapper"
+        class="w-full max-w-4xl mx-auto grid grid-cols-2 gap-6 place-content-center p-4 sm:grid-cols-3 xl:grid-cols-4"
+      ></div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

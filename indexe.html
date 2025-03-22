@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marley & Treasure’s Web Market</title>
+    <!--LINK ICONS-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--TAILWIND CSS-->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prod.css" />
+    <link rel="stylesheet" href="css/keyframe.css" />
+  </head>
+
+  <body id="home-body" class="bg-gray-800 text-white">
+    <!--====HOME PAGE====-->
+    <header class="p-4 mb-3 w-full bg-gray-700 header">
+      <nav class="flex items-center justify-between">
+        <a href="index.html" class="title">M & T's Store</a>
+
+        <!--DARK AND TOGGLE WRAP-->
+        <div class="flex items-center">
+          <div class="nav-menu bg-gray-700 w-80 -right-0" id="nav-menu">
+            <ul class="nav-list text-center flex gap-8 flex-col">
+              <li>
+                <a href="index.html" class="nav-link relative">Product</a>
+              </li>
+              <li>
+                <a href="product.html" class="nav-link relative">Shop</a>
+              </li>
+              <li>
+                <a href="product.html" class="nav-link relative">About</a>
+              </li>
+            </ul>
+
+            <!--CLOSE BUTTON-->
+            <div
+              class="absolute top-1 nav-close flex cursor-pointer"
+              id="nav-close"
+            >
+              <p>X</p>
+            </div>
+          </div>
+
+          <!--TOOGLE BUTTON-->
+          <div id="nav-toogle" class="nav-toogle menu-wrap cursor-pointer flex">
+            <div class="flex flex-col gap-1">
+              <div class="bg-white w-8 h-0.5"></div>
+              <div class="bg-white w-8 h-0.5"></div>
+              <div class="bg-white w-8 h-0.5"></div>
+            </div>
+          </div>
+
+          <!--DARK AND LIGHT THEME BUTTON-->
+          <div
+            id="theme-toggle"
+            class="text-white rounded-full p-2 flex items-center cursor-pointer"
+          >
+            <span class="material-symbols-outlined" id="dark-icon"
+              >dark_mode</span
+            >
+            <span class="material-symbols-outlined hidden" id="light-icon"
+              >light_mode</span
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="home-main flex justify-center items-center">
+      <div id="userGreeting" class="absolute top-20 left-1"></div>
+      <section
+        class="hero flex justify-center items-center flex-col container section"
+      >
+        <div
+          class="size2 flex sm:flex-row flex-col justify-center items-center"
+        >
+          Welcome to
+          <span class="span text-black">Marley & Treasure’s Web Market</span>
+        </div>
+
+        <p>Shop the best products at unbeatable prices!</p>
+        <a
+          href="product.html"
+          class="bg-gray-800 text-white btn cursor-pointer border"
+          >Start Shopping</a
+        >
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userGreeting = document.getElementById("userGreeting");
+        const storedName = localStorage.getItem("name");
+        const loginLink = document.getElementById("loginLink");
+
+        if (storedName) {
+          userGreeting.textContent = `Hello, ${storedName}!`;
+          userGreeting.style.textAlign = "left";
+          userGreeting.style.fontSize = "1em";
+          userGreeting.style.margin = "0";
+
+          loginLink.style.display = "block";
+        } else {
+          loginLink.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

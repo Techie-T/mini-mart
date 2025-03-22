@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Marley & Treasure’s Web Market</title>
+    <link rel="stylesheet" href="css/check.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h2>Checkout</h2>
+
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <p><strong>Total: </strong>$<span id="total-price">0</span></p>
+      </div>
+
+      <!-- Shipping Details -->
+      <div class="shipping-form">
+        <h3>Shipping Details</h3>
+        <input type="text" id="fullName" placeholder="Full Name" required />
+        <input
+          type="tel"
+          id="phoneNumber"
+          placeholder="Phone Number"
+          required
+        />
+        <input
+          type="text"
+          id="address"
+          placeholder="Delivery Address"
+          required
+        />
+      </div>
+
+      <!-- Payment Methods -->
+      <h3>Payment Method</h3>
+      <select id="payment-method">
+        <option value="card">Debit Card (Paystack)</option>
+        <option value="bank">Bank Transfer</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
+
+      <button id="payNow">Proceed to Payment</button>
+
+      <!-- Bank Transfer Details (Hidden by Default) -->
+      <div id="bank-details" class="hidden">
+        <p><strong>Bank Name:</strong> Access Bank</p>
+        <p><strong>Account Number:</strong> 1234567890</p>
+        <p><strong>Account Name:</strong> Marley & Treasure’s Web Market</p>
+        <p>After transfer, send proof of payment to our WhatsApp support.</p>
+      </div>
+    </div>
+
+    <script src="js/check.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+  </body>
+</html>
